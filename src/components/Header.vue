@@ -1,22 +1,73 @@
 <template>
   <header>
-    <h1>Farming Website</h1>
+    <div class="container">
+      <div class="top-nav">
+        <div class="title">
+          <h2>My Farm Hand</h2>
+        </div>
+        <div class="auth-buttons">
+          <button @click="goToLogin" class="login">Login</button>
+          <button class="signup">Sign Up</button>
+        </div>
+      </div>
+    </div>
   </header>
+
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
 
-export default defineComponent({
-  name: 'Header'
-})
+export default {
+  name: 'Header',
+  methods: {
+    goToLogin() {
+      this.$router.push({name: 'Login'});
+    }
+  },
+}
 </script>
 
 <style scoped>
-header {
-  background-color: #4CAF50;
+.top-nav {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.auth-buttons {
+  position: absolute;
+  padding-right: 5px;
+  right: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.login, .signup {
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login {
+  background-color: #007bff;
   color: white;
-  padding: 1rem;
-  text-align: center;
+  border: none;
+  border-radius: 4px;
+}
+
+.signup {
+  background-color: indianred;
+  color: white;
+  border: none;
+  border-radius: 4px;
 }
 </style>

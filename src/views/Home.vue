@@ -1,19 +1,30 @@
 <template>
   <div>
-    <h2>Welcome to the Farming Website</h2>
     <p>Learn about sustainable farming practices and more.</p>
+  </div>
+        <CardComponents/>
+  <div class="container">
+    <p></p>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent } from "vue";
+import CardComponents from '../components/CardComponents.vue';
 
 export default defineComponent({
-  name: 'Home'
-})
+  name: "Home",
+  components: {CardComponents},
+});
 </script>
 
+
 <style scoped>
+body{margin: 0;}
+.container {
+  margin-bottom: 7em;
+}
+
 div {
   padding: 2rem;
 }
