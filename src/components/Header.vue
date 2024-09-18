@@ -15,16 +15,7 @@
 
 </template>
 
-<script lang="ts">
-
-export default {
-  name: 'Header',
-  methods: {
-    goToLogin() {
-      this.$router.push({name: 'Login'});
-    }
-  },
-}
+<script setup lang="ts">
 </script>
 
 <style scoped>
