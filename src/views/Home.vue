@@ -8,14 +8,8 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
+<script setup lang="ts">
 import CardComponents from '../components/CardComponents.vue';
-
-export default defineComponent({
-  name: "Home",
-  components: {CardComponents},
-});
 </script>
 
 
