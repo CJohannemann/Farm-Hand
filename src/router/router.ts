@@ -1,6 +1,7 @@
 import { createMemoryHistory, createRouter, RouteRecordRaw } from 'vue-router'
 import Home from '../views/Home.vue'
-import Login from "../components/Login.vue";
+import Login from "../components/login/Login.vue";
+import User from "../components/model/User.ts";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -10,8 +11,13 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/login',
-    // name: 'Login',
+    name: 'Login',
     component: Login
+  },
+  {
+    path: '/createUser',
+    name: 'Create User',
+    component: User
   }
 ]
 
