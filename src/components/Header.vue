@@ -3,7 +3,7 @@
     <div class="container">
       <div class="top-nav">
         <div class="title">
-          <h2>My Farm Hand</h2>
+          <a href="/"><h2>My Farm Hand</h2></a>
         </div>
         <div class="auth-buttons">
           <button @click="goToLogin" class="login">Login</button>
@@ -16,6 +16,13 @@
 </template>
 
 <script setup lang="ts">
+import {useRouter} from "vue-router";
+
+const router = useRouter();
+const goToLogin = () => {
+  router.push('/login');
+}
+
 </script>
 
 <style scoped>

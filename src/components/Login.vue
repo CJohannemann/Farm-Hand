@@ -1,57 +1,39 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
-<!--  <div class="login-form">-->
-<!--    <h2>Login</h2>-->
-<!--    <form @submit.prevent="login">-->
-<!--      <div>-->
-<!--        <label for="email">Email:</label>-->
-<!--        <input type="email" v-model="email" required />-->
-<!--      </div>-->
-<!--      <div>-->
-<!--        <label for="password">Password:</label>-->
-<!--        <input type="password" v-model="password" required />-->
-<!--      </div>-->
-<!--      <button type="submit">Login</button>-->
-<!--    </form>-->
-<!--  </div>-->
+  <div class="login-container">
+    <h2>Login</h2>
+    <form @submit.prevent="handleSubmit">
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" v-model="email" class="form-control" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" v-model="password" class="form-control" required />
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+  </div>
 </template>
 
+<script setup lang="ts">
+import { ref } from 'vue';
+
+const email = ref('');
+const password = ref('');
+
+const handleSubmit = () => {
+  console.log('Email:', email.value);
+  console.log('Password:', password.value);
+  // Add your authentication logic here
+};
+</script>
 
 <style scoped>
-.login-form {
-  max-width: 300px;
-  margin: auto;
-  padding: 1em;
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
-}
-.login-form div {
-  margin-bottom: 1em;
-}
-.login-form label {
-  margin-bottom: .5em;
-  color: #333333;
-  display: block;
-}
-.login-form input {
-  border: 1px solid #CCCCCC;
-  padding: .5em;
-  font-size: 1em;
-  width: 100%;
-  box-sizing: border-box;
-}
-.login-form button {
-  padding: 0.7em;
-  color: #fff;
-  background-color: #007BFF;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.login-form button:hover {
-  background-color: #0056b3;
 }
 </style>
