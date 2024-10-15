@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import router from './router/router'
-import createRouter from './router/router.ts';
+import router from './frontend/router/router'
+import createRouter from './frontend/router/router.ts';
 import PrimeVue from 'primevue/config';
 
 

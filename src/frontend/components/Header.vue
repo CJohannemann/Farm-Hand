@@ -3,11 +3,11 @@
     <div class="container">
       <div class="top-nav">
         <div class="title">
-          <h2>My Farm Hand</h2>
+          <RouterLink to="/"><h2>My Farm Hand</h2></RouterLink>
         </div>
         <div class="auth-buttons">
-          <button @click="goToLogin" class="login">Login</button>
-          <button class="signup">Sign Up</button>
+          <RouterLink :to="{name: 'Login'}"><button class="login">Login</button></RouterLink>
+          <RouterLink :to="{name: 'Signup'}"><button class="signup">Sign Up</button></RouterLink>
         </div>
       </div>
     </div>
@@ -16,6 +16,7 @@
 </template>
 
 <script setup lang="ts">
+
 </script>
 
 <style scoped>
