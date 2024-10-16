@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import Login from "../components/Login.vue";
 import Signup from "../components/Signup.vue";
 import UserLandingPage from "../components/userDashboard/UserLandingPage.vue";
+import NotFound from "../views/NotFound.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -26,10 +27,16 @@ const routes: Array<RouteRecordRaw> = [
     component: Signup
   },
   {
-    path: '/welcome/a',
+    path: '/welcome/:id',
     name: 'UserLandingPage',
-    component: UserLandingPage
-    // props: true
+    component: UserLandingPage,
+    props: true
+  },
+    //redirect
+  {
+    path:'/:catchAll(.*)',
+    name: 'NotFound',
+    component: NotFound
   }
 
 ]
