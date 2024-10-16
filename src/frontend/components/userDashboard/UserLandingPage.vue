@@ -1,12 +1,22 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
-<div>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque facere maiores reiciendis saepe voluptatibus! A accusantium aliquam amet asperiores consequatur cum doloribus ea earum eius enim error esse exercitationem explicabo fuga fugiat fugit impedit incidunt ipsam magnam maiores maxime natus necessitatibus nostrum obcaecati odio pariatur perspiciatis quo quos reiciendis sequi, similique tenetur ullam unde vero vitae voluptas voluptate? Dolorem doloremque ducimus fugit laboriosam magni nihil possimus quod. Beatae consectetur delectus dignissimos dolores facere facilis impedit incidunt ipsa magnam minima molestiae molestias necessitatibus odit optio perferendis, quaerat quas, qui quibusdam quidem quod quos rem saepe similique suscipit tenetur veniam veritatis vero!</p>
+<div >
+  <p>Welcome name goes here</p>
 </div>
+<!--  <div>-->
+<!--    <h1>Welcome, {{ user.FirstName }}</h1>-->
+<!--    <p>Email: {{ user.Email }}</p>-->
+<!--    <p>Last Name: {{ user.LastName }}</p>-->
+<!--    <p>Postal Code: {{ user.PostalCode }}</p>-->
+<!--  </div>-->
 </template>
+
+<script setup lang="ts">
+// import { useRoute } from 'vue-router';
+//
+// const route = useRoute();
+// console.log(route.params.user)
+// const user = JSON.parse(<string>route.params.user);
+</script>
 
 <style scoped>
 

@@ -1,4 +1,4 @@
-import { createMemoryHistory, createRouter, RouteRecordRaw } from 'vue-router'
+import {createRouter, createWebHistory, RouteRecordRaw} from 'vue-router'
 import Home from '../views/Home.vue'
 import Login from "../components/Login.vue";
 import Signup from "../components/Signup.vue";
@@ -26,15 +26,16 @@ const routes: Array<RouteRecordRaw> = [
     component: Signup
   },
   {
-    path: '/welcome',
+    path: '/welcome/a',
     name: 'UserLandingPage',
     component: UserLandingPage
+    // props: true
   }
 
 ]
 
 const router = createRouter({
-  history: createMemoryHistory(),
+  history: createWebHistory(),
   routes
 })
 

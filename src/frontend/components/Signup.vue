@@ -27,7 +27,7 @@
         <label for="confirmPassword">Confirm Password:</label>
         <input type="password"  required />
       </div>
-      <button type="submit">Create</button>
+      <router-link :to="{name: 'UserLandingPage'}"><button onclick="" type="submit">Create</button></router-link>
     </form>
   </div>
 </template>

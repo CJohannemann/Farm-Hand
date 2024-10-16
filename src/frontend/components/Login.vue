@@ -1,14 +1,12 @@
 <template>
   <div class="login-form">
     <h2>Login</h2>
-    <form @submit.prevent="login">
+    <form @submit.prevent="handleSubmit">
       <div>
-        <label for="email">Email:</label>
-        <input type="email" v-model="email" required />
+        <input v-model="emailAddress" placeholder="Email Address" required />
       </div>
       <div>
-        <label for="password">Password:</label>
-        <input type="password" v-model="password" required />
+        <input type="password"  placeholder="Password" required />
       </div>
       <button type="submit">Login</button>
     </form>
@@ -16,7 +14,27 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
+import {useRouter} from "vue-router";
 
+const emailAddress = ref('');
+console.log(emailAddress)
+const users = ref([
+    {Email:'cjohannemann@gaig.com', FirstName: 'Chris', LastName: 'Johannemann', PostalCode: '41051'},
+    {Email:'clanglitz@gaig.com', FirstName: 'Curtis', LastName: 'Langlitz', PostalCode: '45202'},
+    {Email:'jfouchey@gaig.com', FirstName: 'Josh', LastName: 'Fouchey', PostalCode: '45202'}
+]);
+
+const router = useRouter();
+function handleSubmit() {
+  const user = users.value.find(user => user.Email === emailAddress.value);
+  if (user) {
+    const userString = encodeURIComponent(JSON.stringify(user));
+    router.push({ name: 'UserLandingPage', params: { user: userString } });
+  } else {
+    alert('User not found');
+  }
+}
 </script>
 
 
